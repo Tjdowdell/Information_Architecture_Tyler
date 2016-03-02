@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+#menu{		/*this is where changes are made to the navigation bar*/
+	font-family: Verdana,  Arial, Helvetica, sans-serif;
+	height:35px;
+	clear:both;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width:99%;
+	text-align:center;
+	margin-left:50px;
+	border-top:none;
+}
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	
+	margin:0;
+	padding:0;
+	position: relative;
+	 z-index: 90;	
+	color:#ffffff; 
+}
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-left:2px;
+	}
+	
+#menu li:first-child a{
+	margin-right:0px;
+	}
+/*Style for menu links*/
+li a {
+	border-bottom: 1px solid #ffffff;
+	display:block;
+	min-width:131px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-family: Helvetica, Arial, sans-serif;
+	color:#ffffff;
+	background:#CD3700;
+	text-decoration: none;
+}
+/*Hover state for top level links*/
+li:hover a {
+	background:#e86600;
+}
+/*Style for dropdown links*/
+li:hover ul a {
+	background:#CD3700;
+	color:#F0F8FF;
+	height: 40px;
+	line-height: 40px;
+	margin-left:-2px;	
+}
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: #e86600;
+	color: #ffffff;
+}
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 110px;
+	padding: 0 10px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+	position: absolute; 
+}
+/*Navigational font size*/
+#navbar {
+clear:both;
+font-size:13px;
+float:left;
+margin-left:-50px;
+padding-bottom:10px;
+}
+/*Responsive dropdown navigaional menu*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #FFFFF0;
+	background: #e86600;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+	margin-left:10px;
+}
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+@media (min-width: 481px) and (max-width: 801px){
+	/*Make dropdown links appear inline*/
+	
+ul {
+		position: static;
+		display: none;	 
+}
+		/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 97.2%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+		width:93.8%;
+		margin-left:50px 
+	}
+	
+}
+
+ @media (max-width: 481px){
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 94.8%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+		width:89.3%;
+		margin-left:50px
+	} 
+ }
