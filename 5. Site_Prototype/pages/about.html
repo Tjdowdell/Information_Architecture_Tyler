@@ -7,6 +7,22 @@
 <link rel="shortcut icon" href="../images/icon.ico">
 <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
 <link href="../css/navigation.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+
+      var currentTime = new Date().getHours();
+      if (0 <= currentTime&&currentTime < 6) {
+       document.write("<link rel='stylesheet' href='../css/night.css' type='text/css'>");
+      }
+      if (6 <= currentTime&&currentTime <18) {
+       document.write("<link rel='stylesheet' href='../css/mystyle.css' type='text/css'>");
+      }
+	  if (18 <= currentTime&&currentTime < 24) {
+       document.write("<link rel='stylesheet' href='../css/night.css' type='text/css'>");
+      }
+</script>
+<noscript><link href="../css/mystyle.css" rel="stylesheet"></noscript>
+
 </head>
 <body>
 	<div id="wrapper">
@@ -22,11 +38,12 @@
 			<div id="navbar">
 <label for="show-menu" class="show-menu">Show Menu</label>
 <input type="checkbox" id="show-menu">
-     <ul id="menu">
+   <ul id="menu">
 	<li><a href="../index.html">Home</a></li>
    	<li><a href="../pages/about.html">About Us &#65516;</a>
         <ul class="hidden">
-		<li><a href="../pages/faqs.html">FAQ</a></li>
+		<li><a href="../php/contacts.php">Contact Us</a></li>
+		<li><a href="../pages/faq.html">FAQ</a></li>
         </ul></li>
 		<li><a href="../pages/designs.html">Designs &#65516;</a>
 		<ul class="hidden">
@@ -36,9 +53,9 @@
 		</ul></li>
 		<li><a href="../pages/processes.html">Our Processes </a></li>
 	<li><a href="../pages/testimonials.html">Testimonials</a></li>
-	<li><a href="../pages/contacts.html">Contact Us &#65516;</a>
+	<li><a href="../php/login.php">Login &#65516;</a>
     <ul class="hidden">
-    <li><a href="../pages/login.html">Login</a></li>
+    <li><a href="../php/subscribe.php">Subscribe</a></li>
   		</ul></li>
         </ul>
 </div>
@@ -63,7 +80,7 @@ Alex and Sheree have worked hard to build a business on old-fashioned values and
 		
         
 		<div id="footer"><p>&copy; AllStyle Homes  2015
-			<a href="../pages/privacy.html"><span class="footer">Copyright and Privacy</span></a></p></div>
+			<a href="pages/privacy.html"><span class="footer">Copyright and Privacy</span></a></p></div>
             </div>
 	</body>
 </html>

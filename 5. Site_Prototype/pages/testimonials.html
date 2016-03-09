@@ -7,6 +7,22 @@
 <link rel="shortcut icon" href="../images/icon.ico">
 <link href="../css/mystyle.css" rel="stylesheet" type="text/css">
 <link href="../css/navigation.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+
+      var currentTime = new Date().getHours();
+      if (0 <= currentTime&&currentTime < 6) {
+       document.write("<link rel='stylesheet' href='../css/night.css' type='text/css'>");
+      }
+      if (6 <= currentTime&&currentTime <18) {
+       document.write("<link rel='stylesheet' href='../css/mystyle.css' type='text/css'>");
+      }
+	  if (18 <= currentTime&&currentTime < 24) {
+       document.write("<link rel='stylesheet' href='../css/night.css' type='text/css'>");
+      }
+</script>
+<noscript><link href="../css/mystyle.css" rel="stylesheet"></noscript>
+
 </head>
 <body>
 	<div id="wrapper">
@@ -22,10 +38,11 @@
 			<div id="navbar">
 <label for="show-menu" class="show-menu">Show Menu</label>
 <input type="checkbox" id="show-menu">
-     <ul id="menu">
+   <ul id="menu">
 	<li><a href="../index.html">Home</a></li>
    	<li><a href="../pages/about.html">About Us &#65516;</a>
         <ul class="hidden">
+		<li><a href="../php/contacts.php">Contact Us</a></li>
 		<li><a href="../pages/faq.html">FAQ</a></li>
         </ul></li>
 		<li><a href="../pages/designs.html">Designs &#65516;</a>
@@ -36,9 +53,9 @@
 		</ul></li>
 		<li><a href="../pages/processes.html">Our Processes </a></li>
 	<li><a href="../pages/testimonials.html">Testimonials</a></li>
-	<li><a href="../pages/contacts.html">Contact Us &#65516;</a>
+	<li><a href="../php/login.php">Login &#65516;</a>
     <ul class="hidden">
-    <li><a href="../pages/login.html">Login</a></li>
+    <li><a href="../php/subscribe.php">Subscribe</a></li>
   		</ul></li>
         </ul>
 </div>
@@ -46,8 +63,10 @@
 		<div id="mainContent5">
         <h3>Welcome to AllStyle Homes - Testmonials</h3>
         <h4>Here is what a few of our clients have to say -</h4>
-        <p><img class="image" src="../images/tom.jpg" alt="image" height="116" width="112">"The AllStyle Homes team were a great help with deciding on what to do with my first home. They were all very friendly and the consultation process was easy to understand, making it a lot easier to deal with. Thanks AllStyle Homes for the great experience” - Tom</p>
-        <p><img class="image" src="../images/aaron.jpg" alt="image" height="116" width="112">"The staff at Allstyle Homes are among the easiest people that I have dealt with when it comes to home buying. This is my first home and I have gone to a few other places to find out information about new home buying and building and they were not very friendly and they made it difficult to understand how they did things, but Allstyle Homes were different, they were all very friendly and it was much easier to understand how they did things there. I had no doubts that my new home would be of the highest quality and total satisfaction." - Aaron</p>
+		<img class="image image12" src="../images/tom.jpg" alt="image" height="116px" width="112px"> <p class="clicktext1">Click on me to find out about my experience with Allstyle Homes</p>
+        <p class="testimonial1">"The AllStyle Homes team were a great help with deciding on what to do with my first home. They were all very friendly and the consultation process was easy to understand, making it a lot easier to deal with. Thanks AllStyle Homes for the great experience” - Tom</p>
+        <img class="image image2" src="../images/aaron.jpg" alt="image" height="116px" width="112px"><p class="clicktext2">Click on me to find out about my experience with Allstyle Homes</p>
+		<p class="testimonial2">"The staff at Allstyle Homes are among the easiest people that I have dealt with when it comes to home buying. This is my first home and I have gone to a few other places to find out information about new home buying and building and they were not very friendly and they made it difficult to understand how they did things, but Allstyle Homes were different, they were all very friendly and it was much easier to understand how they did things there. I had no doubts that my new home would be of the highest quality and total satisfaction." - Aaron</p>
         </div>
         
         <div id="sidebar5">
@@ -61,7 +80,26 @@
 		
         
 		<div id="footer"><p>&copy; AllStyle Homes  2015
-			<a href="../pages/privacy.html"><span class="footer">Copyright and Privacy</span></a></p></div>
+			<a href="pages/privacy.html"><span class="footer">Copyright and Privacy</span></a></p></div>
         </div>
+			<script src="../js/jquery-2.2.0.min.js"></script>
+			<script>
+
+			
+			$(document).ready(function() {
+				$(".testimonial1").hide();
+				$(".image12").click(function() {
+					$(".testimonial1").slideDown();
+					$(".clicktext1").hide();
+				});
+			
+				$(".testimonial2").hide();
+				$(".image2").click(function() {
+					$(".testimonial2").slideDown();
+					$(".clicktext2").hide();
+				});
+			
+			});
+			</script>
 	</body>
 </html>

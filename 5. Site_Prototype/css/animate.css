@@ -175,3 +175,13 @@
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
+.animation{
+	animation-name:rotatehead;
+	animation-duration:2s;
+	animation-timing-function:ease-out;	
+}
+@keyframes rotatehead {
+	0%   {transform: translateX(-800px)rotate(20deg);}
+   
+    100%  {transform: translateX(0px)rotate(0deg);}
+}
